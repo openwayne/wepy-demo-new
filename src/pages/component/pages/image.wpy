@@ -1,0 +1,49 @@
+<style lang="less">
+.page-section-ctn {
+  text-align: center;
+}
+
+.image {
+  margin-top: 30rpx;
+  width: 580rpx;
+  height: 208rpx;
+}
+</style>
+<template lang="wxml">
+<view class="container">
+  <component id="head"></component>
+
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">Local Image</view>
+      <view class="page-section-ctn">
+        <image class="image" src="../../resources/pic/1.jpg"/>
+      </view>
+    </view>
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">Internet Image</view>
+      <view class="page-section-ctn">
+        <image class="image" src="../../resources/pic/2.jpg"/>
+      </view>
+    </view>
+  </view>
+
+  <component id="foot"></component>
+</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class image extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

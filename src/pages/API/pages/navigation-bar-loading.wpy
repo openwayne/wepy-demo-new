@@ -1,0 +1,40 @@
+<style lang="less">
+/** less **/
+</style>
+<template lang="wxml">
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="btn-area">
+	      <button type="primary" bindtap="showNavigationBarLoading">显示加载动画</button>
+	      <button bindtap="hideNavigationBarLoading">隐藏加载动画</button>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {
+	  showNavigationBarLoading: function () {
+	    wx.showNavigationBarLoading()
+	  },
+	  hideNavigationBarLoading: function () {
+	    wx.hideNavigationBarLoading()
+	  }
+    };
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

@@ -1,0 +1,63 @@
+<style lang="less">
+.page-section{
+  width: auto;
+  margin: 30rpx;
+  padding: 64rpx 30rpx;
+  background-color: #fff;
+  text-align: center;
+  font-size: 28rpx;
+}
+.desc{
+  color: #B2B2B2;
+}
+.price{
+  margin-top: 30rpx;
+  margin-bottom: 25rpx;
+  position: relative;
+  display: inline-block;
+  font-size: 78rpx;
+  line-height: 1;
+}
+.price:before{
+  content: "¥";
+  position: absolute;
+  font-size: 40rpx;
+  top: 8rpx;
+  left: -40rpx;
+}
+
+</style>
+<template lang="wxml">
+	<view class="container">
+	  <component id="head"></component>
+	  稍等等,等有了appid再说
+	  <view class="page-body">
+	    <view class="page-section">
+	      <view>支付金额</view>
+	      <view class="price">0.01</view>
+	      <view class="desc">实际接口应用中可自定义金额</view>
+	      <view class="btn-area">
+	        <button type="primary" bindtap="requestPayment" loading="{{loading}}">支付</button>
+	      </view>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

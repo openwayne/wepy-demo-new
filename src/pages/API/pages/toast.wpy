@@ -1,0 +1,22 @@
+<style lang="less">
+/** less **/
+</style>
+<template lang="wxml">
+    <view>
+    </view>
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

@@ -1,0 +1,216 @@
+<style lang="less">
+@import "../common/weui.less";
+</style>
+<template lang="wxml">
+	<view class="index">
+	  <view class="index-hd">
+	    <image class="index-logo" src="resources/kind/logo.png"></image>
+	    <view class="index-desc">以下将演示小程序接口能力，具体属性参数详见小程序开发文档。</view>
+	  </view>
+	  <view class="index-bd">
+	    <view class="kind-list">
+	      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+	        <view class="kind-list-item">
+	          <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+	            <view class="kind-list-text">{{item.name}}</view>
+	            <image class="kind-list-img" src="resources/kind/{{item.id}}.png"></image>
+	          </view>
+	          <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+	            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+	              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+	                <navigator url="{{page.url}}" class="navigator">
+	                  <view class="navigator-text">{{page.zh}}</view>
+	                  <view class="navigator-arrow"></view>
+	                </navigator>
+	              </block>
+	            </view>
+	          </view>
+	        </view>
+	      </block>
+	    </view>
+	  </view>
+	</view>
+</template>
+<script>
+import wepy from 'wepy';
+export default class ApiIndex extends wepy.page {
+
+    config = {};
+    components = {};
+
+      data = {
+		list: [
+		  {
+		    id: 'api',
+		    name: '开放接口',
+		    open: true,
+		    pages: [
+		      {
+		        zh: '微信登录',
+		        url: '/pages/API/pages/login'
+		      }, {
+		        zh: '获取用户信息',
+		        url: '/pages/API/pages/get-user-info'
+		      }, {
+		        zh: '发起支付',
+		        url: '/pages/API/pages/request-payment'
+		      }, {
+		        zh: '分享',
+		        url: '/pages/API/pages/share'
+		      }, {
+		        zh: '客服消息',
+		        url: '/pages/API/pages/custom-message'
+		      }, {
+		        zh: '模板消息',
+		        url: '/pages/API/pages/template-message'
+		      }
+		    ]
+		  }, {
+		    id: 'page',
+		    name: '界面',
+		    open: true,
+		    pages: [
+		      {
+		        zh: '设置界面标题',
+		        url: '/pages/API/pages/set-navigation-bar-title'
+		      }, {
+		        zh: '标题栏加载动画',
+		        url: '/pages/API/pages/navigation-bar-loading'
+		      }, {
+		        zh: '页面跳转',
+		        url: '/pages/API/pages/navigator'
+		      }, {
+		        zh: '下拉刷新',
+		        url: '/pages/API/pages/pull-down-refresh'
+		      }, {
+		        zh: '创建动画',
+		        url: '/pages/API/pages/animation'
+		      }, {
+		        zh: '创建绘画',
+		        url: '/pages/API/pages/canvas'
+		      }, {
+		        zh: '显示操作菜单',
+		        url: '/pages/API/pages/action-sheet'
+		      }, {
+		        zh: '显示模态弹窗',
+		        url: '/pages/API/pages/modal'
+		      }, {
+		        zh: '显示消息提示框',
+		        url: '/pages/API/pages/toast'
+		      }
+		    ]
+		  }, {
+		    id: 'device',
+		    name: '设备',
+		    open: true,
+		    pages: [
+		      {
+		        zh: '获取手机网络状态',
+		        url: '/pages/API/pages/get-network-type'
+		      }, {
+		        zh: '获取手机系统信息',
+		        url: '/pages/API/pages/get-system-info'
+		      }, {
+		        zh: '监听重力感应数据',
+		        url: '/pages/API/pages/on-accelerometer-change'
+		      }, {
+		        zh: '监听罗盘数据',
+		        url: '/pages/API/pages/on-compass-change'
+		      }, {
+		        zh: '打电话',
+		        url: '/pages/API/pages/make-phone-call'
+		      }, {
+		        zh: '扫码',
+		        url: '/pages/API/pages/scan-code'
+		      }
+		    ]
+		  }, {
+		    id: 'network',
+		    name: '网络',
+		    open: true,
+		    pages: [
+		      {
+		        zh: '发起一个请求',
+		        url: '/pages/API/pages/request'
+		      }, {
+		        zh: 'WebSocket',
+		        url: '/pages/API/pages/web-socket'
+		      }, {
+		        zh: '上传文件',
+		        url: '/pages/API/pages/upload-file'
+		      }, {
+		        zh: '下载文件',
+		        url: '/pages/API/pages/download-file'
+		      }
+		    ]
+		  }, {
+		    id: 'media',
+		    name: '媒体',
+		    open: true,
+		    pages: [
+		      {
+		        zh: '图片',
+		        url: '/pages/API/pages/image'
+		      }, {
+		        zh: '录音',
+		        url: '/pages/API/pages/voice'
+		      }, {
+		        zh: '背景音频',
+		        url: '/pages/API/pages/background-audio'
+		      }, {
+		        zh: '文件',
+		        url: '/pages/API/pages/file'
+		      }, {
+		        zh: '视频',
+		        url: '/pages/API/pages/video'
+		      }
+		    ]
+		  }, {
+		    id: 'location',
+		    name: '位置',
+		    open: true,
+		    pages: [
+		      {
+		        zh: '获取当前位置',
+		        url: '/pages/API/pages/get-location'
+		      }, {
+		        zh: '使用原生地图查看位置',
+		        url: '/pages/API/pages/open-location'
+		      }, {
+		        zh: '使用原生地图选择位置',
+		        url: '/pages/API/pages/choose-location'
+		      }
+		    ]
+		  }, {
+		    id: 'storage',
+		    name: '数据',
+		    url: '/pages/API/pages/storage'
+		  }
+		]
+	};
+    methods = {
+
+      kindToggle: function (e) {
+	    var id = e.currentTarget.id, list = this.data.list;
+	    for (var i = 0, len = list.length; i < len; ++i) {
+	      if (list[i].id == id) {
+	        if(list[i].url){
+	          wx.navigateTo({
+	            url: list[i].url
+	          })
+	          return
+	        }
+	        list[i].open = !list[i].open
+	      } else {
+	        list[i].open = false
+	      }
+	    }
+	    this.list = list;
+	  }
+    };
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

@@ -1,0 +1,44 @@
+<style lang="less">
+.navigator-hover button{
+  background-color: #DEDEDE;
+}
+.other-navigator-hover button{
+  background-color: #DEDEDE;
+}
+
+</style>
+<template lang="wxml">
+
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="btn-area">
+	      <navigator url="navigate?title=navigate" hover-class="navigator-hover">
+	        <button type="default">跳转到新页面</button>
+	      </navigator>
+	      <navigator url="redirect?title=redirect" redirect hover-class="other-navigator-hover">
+	        <button type="default">在当前页打开</button>
+	      </navigator>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class navigator extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

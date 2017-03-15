@@ -1,0 +1,37 @@
+<style lang="less">
+/** less **/
+</style>
+<template lang="wxml">
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="page-body-wrapper">
+	      <text class="page-body-title">
+	        点击气泡icon打开客服消息界面
+	      </text>
+	      <view class="page-body-line">
+	        <contact-button size="40" session-from="weapp"></contact-button>
+	      </view>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

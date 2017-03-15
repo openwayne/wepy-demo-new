@@ -1,0 +1,55 @@
+<style lang="less">
+textarea {
+    width: 700rpx;
+    padding: 25rpx 0;
+}
+.textarea-wrp {
+    padding: 0 25rpx;
+    background-color: #fff;
+}
+</style>
+<template lang="wxml">
+
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="page-section">
+	      <view class="page-section-title">输入区域高度自适应，不会出现滚动条</view>
+	      <view class="textarea-wrp">
+	        <textarea bindblur="bindTextAreaBlur" auto-height />
+	      </view>
+	    </view>
+
+	    <view class="page-section">
+	      <view class="page-section-title">这是一个可以自动聚焦的textarea</view>
+	      <view class="textarea-wrp">
+	        <textarea auto-focus="true" style="height: 3em" />
+	      </view>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+</template>
+<script>
+import wepy from 'wepy';
+export default class textarea extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {
+    	focus: false
+    };
+    methods = {
+	    bindTextAreaBlur: function(e) {
+	    	console.log(e.detail.value)
+	  	}
+  	};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

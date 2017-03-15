@@ -1,0 +1,42 @@
+<style lang="less">
+/** less **/
+</style>
+<template lang="wxml">
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="btn-area">
+	      <button type="default" bindtap="actionSheetTap">弹出action sheet</button>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {
+    	"navigationBarTitleText": "操作菜单"
+    };
+    components = {};
+
+    data = {};
+    methods = {
+		actionSheetTap: function () {
+			wx.showActionSheet({
+				itemList: ['item1', 'item2', 'item3', 'item4'],
+				success: function (e) {
+					console.log(e.tapIndex)
+				}
+			})
+		}
+    };
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

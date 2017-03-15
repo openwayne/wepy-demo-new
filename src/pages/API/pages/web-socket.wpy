@@ -1,0 +1,51 @@
+<style lang="less">
+@import "../../common/weui.less";
+</style>
+<template lang="wxml">
+
+	<view class="container">
+	  <component id="head"></component>
+	  TODO 等等改啊 有点多
+	  <view class="page-body">
+	    <view class="page-section">
+	      <view class="weui-cells weui-cells_after-title">
+	        <view class="weui-cell weui-cell_switch">
+	          <view class="weui-cell__bd">Socket状态</view>
+	          <view class="weui-cell__ft">
+	            <switch bindchange="toggleSocket" disabled="{{!hasLogin}}"/>
+	          </view>
+	        </view>
+	        <view class="weui-cell">
+	          <view class="weui-cell__bd">消息</view>
+	          <view class="weui-cell__ft">
+	            Hello, 小程序!
+	          </view>
+	        </view>
+	      </view>
+	    </view>
+	    <view class="btn-area">
+	      <button type="primary" size="40" bindtap="sendMessage" disabled="{{socketStatus != 'connected'}}" loading="{{loading}}">点我发送</button>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {
+    	"navigationBarTitleText": "Web Socket"
+    };
+    components = {};
+
+    data = {};
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

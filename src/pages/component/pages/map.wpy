@@ -1,0 +1,56 @@
+<style lang="less">
+/** less **/
+</style>
+<template lang="wxml">
+	<view class="container">
+	   <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="page-section page-section-gap">
+	      <map
+	        style="width: 100%; height: 300px;"
+	        latitude="{{latitude}}"
+	        longitude="{{longitude}}"
+	        markers="{{markers}}"
+	        covers="{{covers}}"
+	        >
+	      </map>
+	    </view>
+	  </view>
+
+	   <component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class map extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {
+	    latitude: 23.099994,
+	    longitude: 113.324520,
+	    markers: [{
+	      latitude: 23.099994,
+	      longitude: 113.324520,
+	      name: 'T.I.T 创意园'
+	    }],
+	    covers: [{
+	      latitude: 23.099994,
+	      longitude: 113.344520,
+	      iconPath: '/images/location.png'
+	    }, {
+	      latitude: 23.099994,
+	      longitude: 113.304520,
+	      iconPath: '/images/location.png'
+	    }]
+    };
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

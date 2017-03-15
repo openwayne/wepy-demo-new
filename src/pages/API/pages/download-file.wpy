@@ -1,0 +1,67 @@
+<style lang="less">
+.page-body image {
+  width: 600rpx;
+  height: 600rpx;
+
+  margin: 0 75rpx;
+}
+</style>
+<template lang="wxml">
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <image wx:if="{{imageSrc}}" src="{{imageSrc}}" mode="center" />
+	    <block wx:else>
+	      <view class="page-body-wording">
+	        <text class="page-body-text">
+	          点击按钮下载服务端示例图片
+	        </text>
+	      </view>
+	      <view class="btn-area">
+	        <button bindtap="downloadImage" type="primary">下载</button>
+	      </view>
+	    </block>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+import cfg from '../../../config';
+const downloadExampleUrl = cfg.downloadExampleUrl;
+export default class extends wepy.page {
+
+    config = {
+    	"navigationBarTitleText": "下载文件"
+    };
+    components = {};
+
+    data = {};
+    methods = {
+	   downloadImage: function() {
+	    var self = this
+
+	    wx.downloadFile({
+	      url: downloadExampleUrl,
+	      success: function(res) {
+	        console.log('downloadFile success, res is', res)
+
+	        self.setData({
+	          imageSrc: res.tempFilePath
+	        })
+	      },
+	      fail: function({errMsg}) {
+	        console.log('downloadFile fail, err is:', errMsg)
+	      }
+	    })
+	  }
+    };
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

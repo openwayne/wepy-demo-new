@@ -1,0 +1,44 @@
+<style lang="less">
+/** less **/
+</style>
+<template lang="wxml">
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="btn-area">
+	      <button bindtap="navigateTo">跳转新页面</button>
+	      <button bindtap="navigateBack">返回上一页</button>
+	      <button bindtap="redirectTo">在当前页面打开</button>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {
+		navigateTo: function () {
+			wx.navigateTo({ url: './navigator' })
+		},
+		navigateBack: function () {
+			wx.navigateBack()
+		},
+		redirectTo: function () {
+			wx.redirectTo({ url: './navigator' })
+		}
+
+    };
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

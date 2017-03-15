@@ -1,0 +1,28 @@
+<style lang="less">
+/** less **/
+</style>
+<template lang="wxml">
+	<view class="container">
+		<component id="head"></component>
+		<component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {};
+
+    events = {};
+    onLoad() {
+	    console.log(options)
+	    this.title = options.title;
+    };
+    // Other properties
+}
+</script>

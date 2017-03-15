@@ -1,0 +1,71 @@
+<style lang="less">
+.flex-wrp{
+  margin-top: 60rpx;
+  display:flex;
+}
+.flex-item{
+  width: 200rpx;
+  height: 300rpx;
+  font-size: 26rpx;
+}
+.flex-item-V{
+  margin: 0 auto;
+  width: 300rpx;
+  height: 200rpx;
+}
+</style>
+<template lang="wxml">
+	<view class="container">
+		<component id="head"></component>
+		<view class="page-body">
+			<view class="page-section">
+			  <view class="page-section-title">
+			    <text>flex-direction: row\n横向布局</text>
+			  </view>
+			  <view class="page-section-spacing">
+			    <view class="flex-wrp" style="flex-direction:row;">
+			      <view class="flex-item demo-text-1"></view>
+			      <view class="flex-item demo-text-2"></view>
+			      <view class="flex-item demo-text-3"></view>
+			    </view>
+			  </view>
+			</view>
+			<view class="page-section">
+			  <view class="page-section-title">
+			    <text>flex-direction: column\n纵向布局</text>
+			  </view>
+			  <view class="flex-wrp" style="flex-direction:column;">
+			    <view class="flex-item flex-item-V demo-text-1"></view>
+			    <view class="flex-item flex-item-V demo-text-2"></view>
+			    <view class="flex-item flex-item-V demo-text-3"></view>
+			  </view>
+			</view>
+		</view>
+
+		<component id="foot"></component>
+	</view>
+</template>
+<script>
+import wepy from 'wepy';
+import Head from '../../../components/head'
+import Foot from '../../../components/foot'
+export default class view extends wepy.page {
+
+    config = {
+    	"navigationBarTitleText": "view展示"
+	};
+    components = {
+    	Head,Foot
+    };
+
+    data = {
+    	$head$title: "view^_^",
+    	$head$desc: "展示view的布局"
+    };
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

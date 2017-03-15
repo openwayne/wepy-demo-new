@@ -1,0 +1,23 @@
+<style lang="less">
+/** less **/
+</style>
+<template lang="wxml">
+	<navigator class="page-foot" openType="switchTab" url="/pages/component/index" hover-class="none">
+		<image class="icon-foot" src="/images/icon_foot.png"></image>
+	</navigator>
+</template>
+<script>
+import wepy from 'wepy';
+export default class Foot extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

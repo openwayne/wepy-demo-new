@@ -1,0 +1,61 @@
+<style lang="less">
+@import "../../common/weui.less";
+</style>
+<template lang="wxml">
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="page-section page-section-gap">
+	      <view class="page-section-title">默认样式</view>
+	      <view class="body-view">
+	        <switch checked bindchange="switch1Change"/>
+	        <switch bindchange="switch2Change"/>
+	      </view>
+	    </view>
+
+	    <view class="page-section">
+	      <view class="page-section-title">推荐展示样式</view>
+	      <view class="weui-cells weui-cells_after-title">
+	        <view class="weui-cell weui-cell_switch">
+	          <view class="weui-cell__bd">开启中</view>
+	          <view class="weui-cell__ft">
+	            <switch checked />
+	          </view>
+	        </view>
+	        <view class="weui-cell weui-cell_switch">
+	          <view class="weui-cell__bd">关闭</view>
+	          <view class="weui-cell__ft">
+	            <switch />
+	          </view>
+	        </view>
+	      </view>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {};
+    components = {};
+
+    data = {};
+    methods = {
+      switch1Change: function (e){
+	    console.log('switch1 发生 change 事件，携带值为', e.detail.value)
+	  },
+	  switch2Change: function (e){
+	    console.log('switch2 发生 change 事件，携带值为', e.detail.value)
+	  }
+    };
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>

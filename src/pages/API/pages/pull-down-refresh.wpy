@@ -1,0 +1,66 @@
+<style lang="less">
+.page-body-info {
+  background-color: transparent;
+}
+.btn-area{
+  margin-top: 300rpx;
+}
+</style>
+<template lang="wxml">
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="page-section">
+	      <view class="page-body-info">
+	        <text class="page-body-text">下滑页面即可刷新</text>
+	      </view>
+	      <view class="btn-area">
+	        <button bindtap="stopPullDownRefresh">停止刷新</button>
+	      </view>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+
+</template>
+<script>
+import wepy from 'wepy';
+export default class extends wepy.page {
+
+    config = {
+		"navigationBarTitleText": "下拉刷新",
+		"enablePullDownRefresh": true
+    };
+    components = {};
+
+    data = {};
+	onPullDownRefresh () {
+		wx.showToast({
+			title: 'loading...',
+			icon: 'loading'
+		})
+		console.log('onPullDownRefresh', new Date())
+	};
+    methods = {
+
+
+		stopPullDownRefresh: function () {
+			wx.stopPullDownRefresh({
+				complete: function (res) {
+					wx.hideToast()
+					console.log(res, new Date())
+				}
+			})
+		}
+
+    };
+
+    events = {};
+    onLoad() {
+    	console.log('----------->', "onLoad");
+    };
+    // Other properties
+}
+</script>

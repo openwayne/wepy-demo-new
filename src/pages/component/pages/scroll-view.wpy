@@ -1,0 +1,70 @@
+<style lang="less">
+.page-section-spacing{
+  margin-top: 60rpx;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 300rpx;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}
+
+</style>
+<template lang="wxml">
+	<view class="container">
+	  <component id="head"></component>
+
+	  <view class="page-body">
+	    <view class="page-section">
+	      <view class="page-section-title">
+	        <text>Vertical Scroll\n纵向滚动</text>
+	      </view>
+	      <view class="page-section-spacing">
+	        <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+	          <view id="demo1" class="scroll-view-item demo-text-1"></view>
+	          <view id="demo2"  class="scroll-view-item demo-text-2"></view>
+	          <view id="demo3" class="scroll-view-item demo-text-3"></view>
+	        </scroll-view>
+	      </view>
+	    </view>
+	    <view class="page-section">
+	      <view class="page-section-title">
+	        <text>Horizontal Scroll\n横向滚动</text>
+	      </view>
+	      <view class="page-section-spacing">
+	        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+	          <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+	          <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
+	          <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
+	        </scroll-view>
+	      </view>
+	    </view>
+	  </view>
+
+	  <component id="foot"></component>
+	</view>
+</template>
+<script>
+import wepy from 'wepy';
+import Head from '../../../components/head'
+import Foot from '../../../components/foot'
+export default class test extends wepy.page {
+
+    config = {};
+    components = {
+    	Head,Foot
+    };
+
+    data = {};
+    methods = {};
+
+    events = {};
+    onLoad() {};
+    // Other properties
+}
+</script>
