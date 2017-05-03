@@ -13,7 +13,6 @@ export default class extends wepy.app {
     config = {
             "pages": [
             "pages/component/index",
-            "pages/component/test",
             // view展示
             "pages/component/pages/view",
             "pages/component/pages/scroll-view",
