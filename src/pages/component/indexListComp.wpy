@@ -1,0 +1,61 @@
+<style lang="less">
+/** less **/
+</style>
+<template lang="wxml">
+	<view class="kind-list">
+	  <block wx:for-items="{{list}}" wx:key="{{item.id}}" wx:for-item="item">
+	    <view class="kind-list-item">
+	      <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" @tap="kindToggle">
+	        <view class="kind-list-text">{{item.name}}</view>
+	        <image class="kind-list-img" src="resources/kind/{{item.id}}.png"></image>
+	      </view>
+	      <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+	        <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+	          <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+	            <navigator url="/pages/component/pages/{{page}}" class="navigator">
+	              <view class="navigator-text">{{page}}</view>
+	              <view class="navigator-arrow"></view>
+	            </navigator>
+	          </block>
+	        </view>
+	      </view>
+	    </view>
+	  </block>
+	</view> 
+</template>
+<script>
+import wepy from 'wepy';
+
+export default class IndexListComp extends wepy.component {
+	props = {
+		test: String
+	};
+    components = {};
+    onLoad() {
+    	console.log(this.test);
+    	this.list = this.$parent.$data.list;
+    }
+
+    data = {
+    	list: []
+    };
+	methods = {
+	  	kindToggle (e) {
+            var id = e.currentTarget.id, list = this.data.list;
+            for (var i = 0, len = list.length; i < len; ++i) {
+              if (list[i].id == id) {
+                let name = list[i].name;
+                name = name.split("_")[0];
+                list[i].open = !list[i].open
+              } else {
+                list[i].open = false
+              }
+            }
+            this.list = list;
+        }
+    };
+
+    events = {};
+    // Other properties
+}
+</script>
