@@ -54,7 +54,7 @@ image {
 	        </view>
 	        <view class="page-body-buttons">
 	          <view class="page-body-button"></view>
-	          <view class="page-body-button" bindtap="startRecord">
+	          <view class="page-body-button" @tap="startRecord">
 	            <image src="/images/record.png"></image>
 	          </view>
 	          <view class="page-body-button"></view>
@@ -67,7 +67,7 @@ image {
 	        </view>
 	        <view class="page-body-buttons">
 	          <view class="page-body-button"></view>
-	          <view class="page-body-button" bindtap="stopRecord">
+	          <view class="page-body-button" @tap="stopRecord">
 	            <view class="button-stop-record"></view>
 	          </view>
 	          <view class="page-body-button"></view>
@@ -81,10 +81,10 @@ image {
 	        </view>
 	        <view class="page-body-buttons">
 	          <view class="page-body-button"></view>
-	          <view class="page-body-button" bindtap="playVoice">
+	          <view class="page-body-button" @tap="playVoice">
 	            <image src="/images/play.png"></image>
 	          </view>
-	          <view class="page-body-button" bindtap="clear">
+	          <view class="page-body-button" @tap="clear">
 	            <image src="/images/trash.png"></image>
 	          </view>
 	        </view>
@@ -96,13 +96,13 @@ image {
 	          <text class="time-small">{{formatedRecordTime}}</text>
 	        </view>
 	        <view class="page-body-buttons">
-	          <view class="page-body-button" bindtap="stopVoice">
+	          <view class="page-body-button" @tap="stopVoice">
 	            <image src="/images/stop.png"></image>
 	          </view>
-	          <!-- <view class="page-body-button" bindtap="pauseVoice">
+	          <!-- <view class="page-body-button" @tap="pauseVoice">
 	            <image src="/images/pause.png"></image>
 	          </view> -->
-	          <view class="page-body-button" bindtap="clear">
+	          <view class="page-body-button" @tap="clear">
 	            <image src="/images/trash.png"></image>
 	          </view>
 	        </view>

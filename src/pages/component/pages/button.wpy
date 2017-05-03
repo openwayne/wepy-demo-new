@@ -16,13 +16,13 @@ button{
 		<component id="head"></component>
 		<view class="page-body">
 			<view class="btn-area" id="buttonContainer">
-				<button type="primary" bindtap="setDisabled">点击{{disabled ? '启用' : '禁用'}}下方按钮</button>
+				<button type="primary" @tap="setDisabled">点击{{disabled ? '启用' : '禁用'}}下方按钮</button>
 				<button type="primary" disabled="{{disabled ? true : false}}">我被上面按钮控制</button>
 
-				<button type="primary" bindtap="setPlain">点击{{plain ? 'plain' : 'normal'}}下方按钮</button>
+				<button type="primary" @tap="setPlain">点击{{plain ? 'plain' : 'normal'}}下方按钮</button>
 				<button type="primary" plain="{{plain ? true : false}}">我被上面按钮控制</button>
 
-				<button type="primary" bindtap="setLoading">点击{{loading ? 'loading' : 'normal'}}下方按钮</button>
+				<button type="primary" @tap="setLoading">点击{{loading ? 'loading' : 'normal'}}下方按钮</button>
 				<button type="primary" loading="{{loading ? true : false}}">我被上面按钮控制</button>
 
 				<br>

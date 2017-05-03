@@ -58,7 +58,7 @@
 	        </view>
 	      </view>
 	      <view class="btn-area">
-	        <button type="primary" bindtap="getSystemInfo">获取手机系统信息</button>
+	        <button type="primary" @tap="getSystemInfo">获取手机系统信息</button>
 	      </view>
 	    </view>
 	  </view>

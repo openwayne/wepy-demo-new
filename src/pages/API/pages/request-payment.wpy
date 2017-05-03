@@ -37,7 +37,7 @@
 	      <view class="price">0.01</view>
 	      <view class="desc">实际接口应用中可自定义金额</view>
 	      <view class="btn-area">
-	        <button type="primary" bindtap="requestPayment" loading="{{loading}}">支付</button>
+	        <button type="primary" @tap="requestPayment" loading="{{loading}}">支付</button>
 	      </view>
 	    </view>
 	  </view>

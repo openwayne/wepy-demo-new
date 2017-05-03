@@ -24,7 +24,7 @@
 	      </view>
 	    </view>
 	    <view class="btn-area">
-	      <button type="primary" size="40" bindtap="sendMessage" disabled="{{socketStatus != 'connected'}}" loading="{{loading}}">点我发送</button>
+	      <button type="primary" size="40" @tap="sendMessage" disabled="{{socketStatus != 'connected'}}" loading="{{loading}}">点我发送</button>
 	    </view>
 	  </view>
 

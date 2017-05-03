@@ -31,8 +31,8 @@
 	        </block>
 	      </view>
 	      <view class="btn-area">
-	        <button type="primary" bindtap="getUserInfo">获取用户信息</button>
-	        <button bindtap="clear">清空</button>
+	        <button type="primary" @tap="getUserInfo">获取用户信息</button>
+	        <button @tap="clear">清空</button>
 	      </view>
 	    </view>
 	  </view>

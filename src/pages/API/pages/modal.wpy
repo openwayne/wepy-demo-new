@@ -7,8 +7,8 @@
 
 	  <view class="page-body">
 	    <view class="btn-area">
-	      <button type="default" bindtap="modalTap">有标题的modal</button>
-	      <button type="default" bindtap="noTitlemodalTap">无标题的modal</button>
+	      <button type="default" @tap="modalTap">有标题的modal</button>
+	      <button type="default" @tap="noTitlemodalTap">无标题的modal</button>
 	    </view>
 	  </view>
 

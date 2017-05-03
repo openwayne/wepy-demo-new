@@ -25,8 +25,8 @@
 	        </block>
 	      </view>
 	      <view class="btn-area">
-	        <button type="primary" bindtap="getNetworkType">获取手机网络状态</button>
-	        <button bindtap="clear">清空</button>
+	        <button type="primary" @tap="getNetworkType">获取手机网络状态</button>
+	        <button @tap="clear">清空</button>
 	      </view>
 	    </view>
 	  </view>

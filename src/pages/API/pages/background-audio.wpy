@@ -53,16 +53,16 @@ image {
 	    <view class="page-body-text tc">注意：离开当前页面后背景音乐将保持播放，但退出小程序将停止</view>
 	    <view class="page-body-buttons">
 	      <block wx:if="{{playing === true}}">
-	        <view class="page-body-button" bindtap="stop">
+	        <view class="page-body-button" @tap="stop">
 	          <image src="/images/stop.png"></image>
 	        </view>
-	        <view class="page-body-button" bindtap="pause">
+	        <view class="page-body-button" @tap="pause">
 	          <image src="/images/pause.png"></image>
 	        </view>
 	      </block>
 	      <block wx:if="{{playing === false}}">
 	        <view class="page-body-button"></view>
-	        <view class="page-body-button" bindtap="play">
+	        <view class="page-body-button" @tap="play">
 	          <image src="/images/play.png"></image>
 	        </view>
 	      </block>

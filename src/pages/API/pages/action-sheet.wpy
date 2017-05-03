@@ -7,7 +7,7 @@
 
 	  <view class="page-body">
 	    <view class="btn-area">
-	      <button type="default" bindtap="actionSheetTap">弹出action sheet</button>
+	      <button type="default" @tap="actionSheetTap">弹出action sheet</button>
 	    </view>
 	  </view>
 

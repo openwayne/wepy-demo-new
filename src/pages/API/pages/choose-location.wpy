@@ -24,8 +24,8 @@
 	        </block>
 	      </view>
 	      <view class="btn-area">
-	        <button type="primary" bindtap="chooseLocation">选择位置</button>
-	        <button bindtap="clear">清空</button>
+	        <button type="primary" @tap="chooseLocation">选择位置</button>
+	        <button @tap="clear">清空</button>
 	      </view>
 	    </view>
 	  </view>

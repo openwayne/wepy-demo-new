@@ -36,7 +36,7 @@
 	      </block>
 	      <block wx:if="{{hasLogin === false}}">
 	        <text class="page-body-text">每个微信号中仅需登录一次</text>
-	        <button class="page-body-button" type="primary" bindtap="login">微信登录</button>
+	        <button class="page-body-button" type="primary" @tap="login">微信登录</button>
 	      </block>
 	    </view>
 	  </view>

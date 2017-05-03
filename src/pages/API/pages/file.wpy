@@ -29,7 +29,7 @@
 	          <image src="{{savedFilePath}}" class="image" mode="aspectFit"></image>
 	        </block>
 	        <block wx:if="{{tempFilePath === '' && savedFilePath === ''}}">
-	          <view class="image-plus image-plus-nb" bindtap="chooseImage">
+	          <view class="image-plus image-plus-nb" @tap="chooseImage">
 	            <view class="image-plus-horizontal"></view>
 	            <view class="image-plus-vertical"></view>
 	          </view>
@@ -37,8 +37,8 @@
 	        </block>
 	      </view>
 	      <view class="btn-area">
-	        <button type="primary" bindtap="saveFile">保存文件</button>
-	        <button bindtap="clear">删除文件</button>
+	        <button type="primary" @tap="saveFile">保存文件</button>
+	        <button @tap="clear">删除文件</button>
 	      </view>
 	    </view>
 	  </view>

@@ -12,7 +12,7 @@
 	      </text>
 	    </view>
 	    <view class="btn-area">
-	      <button bindtap="makeRequest" type="primary" disabled="{{buttonDisabled}}" loading="{{loading}}">request</button>
+	      <button @tap="makeRequest" type="primary" disabled="{{buttonDisabled}}" loading="{{loading}}">request</button>
 	    </view>
 	  </view>
 

@@ -29,11 +29,11 @@
 	  <view class="page-body">
 	    <view class="page-section">
 	      <canvas class="canvas-element" canvas-id="canvas"></canvas>
-	      	        <button class="canvas-button" bindtap="toTempFilePath" type="primary">toTempFilePath</button>
+	      	        <button class="canvas-button" @tap="toTempFilePath" type="primary">toTempFilePath</button>
 
 	      <scroll-view class="canvas-buttons" scroll-y="true">
 	        <block wx:for="{{methods}}" wx:for-item="method">
-	          <button class="canvas-button" bindtap="{{method}}">{{method}}</button>
+	          <button class="canvas-button" @tap="{{method}}">{{method}}</button>
 	        </block>
 	      </scroll-view>
 	    </view>

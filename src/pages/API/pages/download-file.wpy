@@ -19,7 +19,7 @@
 	        </text>
 	      </view>
 	      <view class="btn-area">
-	        <button bindtap="downloadImage" type="primary">下载</button>
+	        <button @tap="downloadImage" type="primary">下载</button>
 	      </view>
 	    </block>
 	  </view>

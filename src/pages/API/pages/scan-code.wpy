@@ -19,7 +19,7 @@
 	      </view>
 	    </view>
 	    <view class="btn-area">
-	      <button type="primary" bindtap="scanCode">扫一扫</button>
+	      <button type="primary" @tap="scanCode">扫一扫</button>
 	    </view>
 	  </view>
 

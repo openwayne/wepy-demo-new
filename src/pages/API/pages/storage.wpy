@@ -26,9 +26,9 @@
         </view>
       </view>
       <view class="btn-area">
-        <button type="primary" bindtap="setStorage">存储数据</button>
-        <button bindtap="getStorage">读取数据</button>
-        <button bindtap="clearStorage">清理数据</button>
+        <button type="primary" @tap="setStorage">存储数据</button>
+        <button @tap="getStorage">读取数据</button>
+        <button @tap="clearStorage">清理数据</button>
       </view>
     </view>
   </view>

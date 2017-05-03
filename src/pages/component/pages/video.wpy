@@ -29,7 +29,7 @@
 	        </view>
 	      </view>
 	      <view class="btn-area">
-	        <button bindtap="bindSendDanmu" class="page-body-button" type="primary" formType="submit">发送弹幕</button>
+	        <button @tap="bindSendDanmu" class="page-body-button" type="primary" formType="submit">发送弹幕</button>
 	      </view>
 	    </view>
 	  </view>

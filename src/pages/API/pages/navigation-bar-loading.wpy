@@ -7,8 +7,8 @@
 
 	  <view class="page-body">
 	    <view class="btn-area">
-	      <button type="primary" bindtap="showNavigationBarLoading">显示加载动画</button>
-	      <button bindtap="hideNavigationBarLoading">隐藏加载动画</button>
+	      <button type="primary" @tap="showNavigationBarLoading">显示加载动画</button>
+	      <button @tap="hideNavigationBarLoading">隐藏加载动画</button>
 	    </view>
 	  </view>
 

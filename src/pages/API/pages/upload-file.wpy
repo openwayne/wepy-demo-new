@@ -28,7 +28,7 @@
 	        </block>
 
 	        <block wx:else>
-	          <view class="image-plus image-plus-nb" bindtap="chooseImage">
+	          <view class="image-plus image-plus-nb" @tap="chooseImage">
 	            <view class="image-plus-horizontal"></view>
 	            <view class="image-plus-vertical"></view>
 	          </view>

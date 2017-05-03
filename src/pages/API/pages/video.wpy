@@ -53,7 +53,7 @@
 
       <view class="page-body-info">
         <block wx:if="{{src === ''}}">
-          <view class="image-plus image-plus-nb" bindtap="chooseVideo">
+          <view class="image-plus image-plus-nb" @tap="chooseVideo">
             <view class="image-plus-horizontal"></view>
             <view class="image-plus-vertical"></view>
           </view>
